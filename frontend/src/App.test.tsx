@@ -1,14 +1,16 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { AxiosError, type AxiosResponse, type InternalAxiosRequestConfig } from "axios";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { api } from "./api/client";
-import App from "./App";
 import { SessionProvider } from "./context/SessionContext";
 import { useSessionContext } from "./hooks/useSessionContext";
-import Profile from "./routes/Profile";
 import { setLocale } from "./i18n";
+
+import App from "./App";
+import Profile from "./routes/Profile";
+
 import { en } from "./i18n/locales/en";
 
 function axiosFailure(status: number, data: unknown) {

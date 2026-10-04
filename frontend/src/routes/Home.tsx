@@ -1,5 +1,6 @@
-import googlePill from "../assets/signin-assets/Android + Web/SVG/Light/Theme=Light, Show text=Yes, Shape=Pill, Platform=Android+Web.svg";
 import { useSessionContext } from "../hooks/useSessionContext";
+
+import googlePill from "../assets/signin-assets/Android + Web/SVG/Light/Theme=Light, Show text=Yes, Shape=Pill, Platform=Android+Web.svg";
 
 export default function Home() {
   const session = useSessionContext();

@@ -1,6 +1,7 @@
+import { createContext, type ReactNode } from "react";
+
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { isAxiosError } from "axios";
-import { createContext, type ReactNode } from "react";
 
 import { logout } from "../api/auth";
 import { getProfile } from "../api/profile";

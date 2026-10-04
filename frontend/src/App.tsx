@@ -1,10 +1,13 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter } from "react-router-dom";
 
-import "./App.css";
 import { SessionProvider } from "./context/SessionContext";
+
 import AppRoutes from "./routes";
+
+import "./App.css";
 
 export default function App() {
   const [queryClient] = useState(() => new QueryClient());
