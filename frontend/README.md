@@ -133,18 +133,21 @@ yarn format
 
 [Back to the top](#frontend)
 
-
 ## Data Fetching
 
+[Axios](https://axios-http.com/) sends HTTP. [TanStack Query](https://tanstack.com/query/latest) decides when a request runs and keeps the cache, loading state, and errors.
 
+`src/api/client.ts` creates one Axios instance with `withCredentials: true`, so the browser sends the session cookie. Functions in `src/api` call that instance. Reads use `useQuery` and pass its `AbortSignal` into Axios, so the request cancels when the query is dropped. Writes use `useMutation`. `App` holds one `QueryClient` inside `QueryClientProvider`. An Axios error whose body is a problem is mapped to a catalog message with `messageForProblem`.
+
+The session query is the exception. A `401` means there is no session, so that query returns `null` and the status is signed out. Other failed requests surface as an error.
 
 [Back to the top](#frontend)
-
 
 ## Technologies
 
 - React and TypeScript
 - Vite
+- Axios and TanStack Query
 - Vitest, Testing Library, and jsdom
 - Oxlint and Oxfmt
 - Yarn

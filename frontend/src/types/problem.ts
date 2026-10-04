@@ -1,4 +1,4 @@
 export type Problem = {
-    code?: string;
-    detail?: string;
-  };
+  code?: string;
+  detail?: string;
+};
