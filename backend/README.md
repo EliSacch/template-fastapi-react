@@ -93,7 +93,7 @@ uv run python -m app.main
 or
 
 ```bash
-uv run uvicorn app.main:app --reload --port 8000
+uv run uvicorn app.main:app --reload --reload-dir app --port 8000
 ```
 
 #### Local database

@@ -20,6 +20,8 @@ The frontend is built with React + Typescript
   - [Oxlint Configuration](#oxlint-configuration)
   - [Formatting](#formatting)
 
+- [Data Fetching](#data-fetching)
+
 - [Technologies](#technologies)
 
 ## React Compiler
@@ -40,10 +42,22 @@ To add a language, add a file such as `src/i18n/locales/fr.ts` with the same `er
 
 ### Local deployment
 
-Install the Node dependencies with yarn:
+From the frontend directory
 
 ```bash
 cd frontend
+```
+
+Install (if not already installed) and use the compatible node version
+
+```bash
+nvm install
+nvm use
+```
+
+Install the Node dependencies with yarn:
+
+```bash
 yarn install
 ```
 
@@ -118,6 +132,14 @@ yarn format
 `yarn format --check` reports files that are not formatted and does not change them.
 
 [Back to the top](#frontend)
+
+
+## Data Fetching
+
+
+
+[Back to the top](#frontend)
+
 
 ## Technologies
 
